@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cake Test</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: grey;
+    }
+
+    .cake {
+      position: relative;         /* 🔑 anchors candle */
+      width: 400px;
+      height: 200px;
+      background: palevioletred;
+      border-radius: 15px;
+    }
+
+    .candle {
+      position: absolute;         /* relative to .cake */
+      top: -80px;                 /* move above cake */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 80px;
+      background: white;
+      border: 2px solid black;
+      border-radius: 6px;
+    }
+
+    .flame {
+      position: absolute;
+      top: -35px;                 /* above candle */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 35px;
+      background: orange;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* teardrop */
+    }
+  </style>
+</head>
+<body>
+  <div class="cake">
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+  </div>
+</body>
+</html>
